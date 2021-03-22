@@ -1,4 +1,5 @@
 ﻿using Entidad;
+using Logica;
 using System;
 
 namespace Presentacion
@@ -36,6 +37,10 @@ namespace Presentacion
              liquidacionCuota.CalcularCuotaModeradora();
 
             Console.WriteLine($"Su liquidacion es:{liquidacionCuota.CuotaModeradora}");
+
+            LiquidacionCuotaService liquidacionCuotaService = new LiquidacionCuotaService();
+
+            Console.WriteLine(liquidacionCuotaService.Guardar(liquidacionCuota));
 
             Console.ReadKey();
 
