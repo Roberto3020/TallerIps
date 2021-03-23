@@ -49,5 +49,7 @@ namespace Entidad
         {
             return $"NumeroLiquidacion: {NumeroLiquidacion}-Identificacion: {IdentificacionPaciente} - tipo afiliacion:{TipoAfiliacion}--liquidacion: {CuotaModeradora}";
         }
+
+        
     }
 }

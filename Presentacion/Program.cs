@@ -42,6 +42,18 @@ namespace Presentacion
 
             Console.WriteLine(liquidacionCuotaService.Guardar(liquidacionCuota));
 
+            Console.WriteLine("Consultar liquidacion:");
+            ConsultaRespuesta consultaRespuesta = liquidacionCuotaService.Consultar();
+            if (!consultaRespuesta.Error)
+            {
+                foreach (var item in consultaRespuesta.Liquidaciones)
+                {
+                    Console.WriteLine(item.ToString());
+                }
+            }
+            else
+                Console.WriteLine(consultaRespuesta.Mensaje);
+
             Console.ReadKey();
 
 
